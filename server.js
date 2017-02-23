@@ -6,9 +6,9 @@ var express = require("express"),
     mongoose = require('mongoose'),
     cors = require('cors'),
     user = require('./model/userModel.js'),
-    property = require('./model/PropertyModel.js');
+    property = require('./model/propertyModel.js');
 
-app.use(bodyParser());
+app.use(bodyParserg());
 app.use(methodOverride());
 
 var router = express.Router();
