@@ -8,7 +8,7 @@ var express = require("express"),
     user = require('./model/userModel.js'),
     property = require('./model/propertyModel.js');
 
-app.use(bodyParserg());
+app.use(bodyParser());
 app.use(methodOverride());
 
 var router = express.Router();
