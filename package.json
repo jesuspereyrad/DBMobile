@@ -1,0 +1,35 @@
+{
+  "name": "homefinder",
+  "version": "1.0.0",
+  "description": "intro to mobile final project.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jesus Pereyra, Angel Gonzalez, Eva Concepcion",
+  "license": "MIT",
+  "dependencies": {
+    "@google/maps": "^0.3.1",
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.1.9",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.7.0",
+    "multer": "^1.2.0",
+    "node-fetch": "^1.6.3",
+    "node-quickbooks": "^2.0.11",
+    "nodemon": "^1.11.0",
+    "promise": "^7.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://angelg107@bitbucket.org/jesus_pereyra/homefinder.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-serve": "^0.1.6"
+  }
+}
