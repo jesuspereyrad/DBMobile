@@ -11,7 +11,7 @@ var propertySchema = new mongoose.Schema({
   latitude: {type: Number},
   longitude: {type: Number},
   owner: {type: String},
-  telehone: {type: String},
+  telephone: {type: String},
   rating: {type: Number}
 
 }, {collection: 'property'});
