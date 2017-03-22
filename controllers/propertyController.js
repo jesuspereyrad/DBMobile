@@ -59,8 +59,8 @@ module.exports = function(app) {
 	        });
 	    };
 
-	 //DELETE - Delete a user with specified ID
-	 deleteProperty = function(req, res) {
+	//DELETE - Delete a user with specified ID
+	deleteProperty = function(req, res) {
 	    property.findByIdAndRemove(req.params.id, function(err) {
 	        if (err){
 	            res.status(404).send("Property not found");
@@ -70,5 +70,11 @@ module.exports = function(app) {
 	        }
 	    })
 	};
+
+	deleteAll = function(req, res) {
+		property.remove({}, function(err, numberRemoved) {
+			console.log("inside remove call back" + numberRemoved);
+		});
+	}
 
 };
