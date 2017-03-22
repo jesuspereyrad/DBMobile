@@ -15,6 +15,6 @@ module.exports = function(app) {
     app.get('/properties', findAllProperties); //Find all products in database
     app.get('/property/:id', findPropertyByID); //Find one product in QuickBooks
     app.post('/property/', addProperty);
-    app.delete('/product/:id', deleteProperty);
+    app.delete('/property/:id', deleteProperty);
 
 }

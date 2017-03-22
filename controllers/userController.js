@@ -3,6 +3,22 @@ var user = require('../model/userModel.js');
 
 module.exports = function(app) {
 
+	loginUser = function(req, res) {
+		console.log(req.pamams.email, req.params.password);
+		user.findOne({email: req.params.email}), function(err, current) {
+			if(err) {
+				res.status(404).send("User not found");
+			}
+			else {
+				if (current.password == req.params.password) {
+					res.status(200).json(current);
+				}
+				else
+					res.status(500).send("Incorrect Password");
+			}
+		}
+	}
+
 	 //GET - Return a user with specified ID
 	findUserByID = function(req, res) {
 	    console.log(req.params.id);
@@ -18,7 +34,7 @@ module.exports = function(app) {
 	 };
 
 	addUser = function(req, res) {
-	    user.findOne({username: req.body.username}, function(err, current) {
+	    user.findOne({email: req.body.email}, function(err, current) {
 	      if(err){
 	        res.status(500).send("error with the application");
 	      }

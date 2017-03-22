@@ -12,7 +12,9 @@ var propertySchema = new mongoose.Schema({
   longitude: {type: Number},
   owner: {type: String},
   telephone: {type: String},
-  rating: {type: Number}
+  rating: {type: Number},
+  house: {type: Boolean},
+  apartment: {type: Boolean}
 
 }, {collection: 'property'});
 

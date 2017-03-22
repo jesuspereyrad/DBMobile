@@ -43,7 +43,9 @@ module.exports = function(app) {
 	          latitude: req.body.latitude,
 	          longitude: req.body.longitude,
 	          telephone: req.body.telephone,
-	          rating: req.body.rating
+	          rating: req.body.rating,
+	          apartment: req.body.apartment,
+	          house: req.body.house
 	        });
 	       	console.log('POST');
 	       	console.log(newPropertyObj);
