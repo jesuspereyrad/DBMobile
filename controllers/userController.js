@@ -3,6 +3,20 @@ var user = require('../model/userModel.js');
 
 module.exports = function(app) {
 
+
+	 //GET - Return all property in the DB
+	findAllUsers = function(req, res) {
+	    user.find(function(err, current) {
+	      if (err){
+	        res.status(500).send("Error property empty");
+	      }
+	      else {
+	        console.log('GET /property');
+	        res.status(200).json(current);
+	      }
+	    });
+  	};
+
 	loginUser = function(req, res) {
 		console.log(req.pamams.email, req.params.password);
 		user.findOne({email: req.params.email}), function(err, current) {

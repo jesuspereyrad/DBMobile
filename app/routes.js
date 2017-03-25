@@ -8,8 +8,9 @@ module.exports = function(app) {
     var multer = require('multer');
 
 
-    app.get('/users/:id', findUserByID);
-    app.post('/users', addUser);
+    app.get('/user/:id', findUserByID);
+    app.get('/users', findAllUsers);
+    app.post('/user', addUser);
     app.delete('/users/:id', deleteUser);
 
     app.get('/properties', findAllProperties); //Find all products in database
