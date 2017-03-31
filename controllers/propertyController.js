@@ -45,7 +45,13 @@ module.exports = function(app) {
 	          telephone: req.body.telephone,
 	          rating: req.body.rating,
 	          apartment: req.body.apartment,
-	          house: req.body.house
+	          house: req.body.house,
+	          type: req.body.type,
+	          bedroom: req.body.bedroom,
+	          bathroom: req.body.bathroom,
+	          email: req.body.email,
+	          username: req.body.email,
+	          sizeHouse: req.body.size}
 	        });
 	       	console.log('POST');
 	       	console.log(newPropertyObj);

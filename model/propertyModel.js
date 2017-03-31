@@ -14,7 +14,13 @@ var propertySchema = new mongoose.Schema({
   telephone: {type: String},
   rating: {type: Number},
   house: {type: Boolean},
-  apartment: {type: Boolean}
+  apartment: {type: Boolean},
+  type: {type: Boolean},
+  sizeHouse: {type: Number},
+  bedroom: {type: Number},
+  bathroom: {type: Number},
+  email: {type: String},
+  username: {type: String}
 
 }, {collection: 'property'});
 
