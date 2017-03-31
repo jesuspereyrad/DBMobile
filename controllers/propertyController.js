@@ -46,7 +46,7 @@ module.exports = function(app) {
 	          rating: req.body.rating,
 	          apartment: req.body.apartment,
 	          house: req.body.house,
-	          type: req.body.type,
+	          typeHouse: req.body.typeHouse,
 	          bedroom: req.body.bedroom,
 	          bathroom: req.body.bathroom,
 	          email: req.body.email,

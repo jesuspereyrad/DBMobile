@@ -15,7 +15,7 @@ var propertySchema = new mongoose.Schema({
   rating: {type: Number},
   house: {type: Boolean},
   apartment: {type: Boolean},
-  type: {type: Boolean},
+  typeHouse: {type: Boolean},
   sizeHouse: {type: Number},
   bedroom: {type: Number},
   bathroom: {type: Number},
