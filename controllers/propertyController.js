@@ -52,7 +52,7 @@ module.exports = function(app) {
 	          email: req.body.email,
 	          username: req.body.email,
 	          sizeHouse: req.body.sizeHouse,
-	          houseName: req.body.houseName;
+	          houseName: req.body.houseName
 	        });
 	       	console.log('POST');
 	       	console.log(newPropertyObj);
