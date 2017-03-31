@@ -51,7 +51,7 @@ module.exports = function(app) {
 	          bathroom: req.body.bathroom,
 	          email: req.body.email,
 	          username: req.body.email,
-	          sizeHouse: req.body.size
+	          sizeHouse: req.body.sizeHouse,
 	        });
 	       	console.log('POST');
 	       	console.log(newPropertyObj);
