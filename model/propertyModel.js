@@ -22,7 +22,7 @@ var propertySchema = new mongoose.Schema({
   email: {type: String},
   username: {type: String},
   houseName: {type: String},
-  photos: {type: String}
+  photos: [String]
 
 }, {collection: 'property'});
 
