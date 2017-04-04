@@ -32,8 +32,8 @@ module.exports = function(app) {
 
 	addProperty = function(req, res) {
 			    console.log(req.body);
-	        photosStr = req.body.photosl
-	        size = photosStr.size();
+	        photosStr = req.body.photos;
+	        size = (req.body.photos).size();
 	        photosStr = photosStr.substring(1,size - 1);
 	        console.log(photosStr);
 	        var newPropertyObj = new property({
