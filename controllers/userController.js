@@ -19,13 +19,12 @@ module.exports = function(app) {
 
 	loginUser = function(req, res) {
 		console.log(req.body);
-		console.log(req.params.email, req.params.password);
-		user.findOne({email: req.params.email}), function(err, current) {
+		user.findOne({email: req.body.email}), function(err, current) {
 			if(err) {
 				res.status(404).send("User not found");
 			}
 			else {
-				if (current.password == req.params.password) {
+				if (current.password == req.body.password) {
 					res.status(200).json(current);
 				}
 				else
