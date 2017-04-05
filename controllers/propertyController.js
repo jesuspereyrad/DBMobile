@@ -32,10 +32,7 @@ module.exports = function(app) {
 
 	addProperty = function(req, res) {
 			    console.log(req.body);
-	        photosStr = req.body.photos;
-	        size = (req.body.photos).size();
-	        photosStr = photosStr.substring(1,size - 1);
-	        console.log(photosStr);
+
 	        var newPropertyObj = new property({
 	          description: req.body.description,
 	          price: req.body.price,
@@ -56,7 +53,7 @@ module.exports = function(app) {
 	          username: req.body.email,
 	          sizeHouse: req.body.sizeHouse,
 	          houseName: req.body.houseName,
-	          photos: photosStr
+	          photos: req.body.photos
 	        });
 	       	console.log('POST');
 	       	console.log(newPropertyObj);
