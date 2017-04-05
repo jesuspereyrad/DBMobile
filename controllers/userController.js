@@ -19,7 +19,7 @@ module.exports = function(app) {
 
 	loginUser = function(req, res) {
 		console.log(req.body);
-		user.findOne({email: req.body.email}), function(err, current) {
+		user.find({email: req.body.email}), function(err, current) {
 			if(err) {
 				res.status(404).send("User not found");
 			}
