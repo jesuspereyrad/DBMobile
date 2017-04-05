@@ -10,6 +10,7 @@ module.exports = function(app) {
 
     app.get('/user/:id', findUserByID);
     app.get('/users', findAllUsers);
+    app.post('/userLogin', login);
     app.post('/user', addUser);
     app.delete('/users/:id', deleteUser);
 
