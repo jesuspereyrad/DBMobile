@@ -25,7 +25,7 @@ module.exports = function(app) {
 			}
 			else {
 				console.log("hola");
-				if (current.password == req.params.password) {
+				if (current.password == req.body.password) {
 					res.status(200).json(current);
 				}
 				else
