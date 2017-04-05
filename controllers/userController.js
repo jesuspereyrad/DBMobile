@@ -26,7 +26,7 @@ module.exports = function(app) {
 			else {
 				console.log("hola");
 				if (current.password == req.body.password) {
-					res.status(200).json(current.name);
+					res.status(200).send(current.name);
 				}
 				else
 					res.status(500).send("Incorrect Password");
