@@ -18,7 +18,8 @@ module.exports = function(app) {
   	};
 
 	loginUser = function(req, res) {
-		console.log(req.pamams.email, req.params.password);
+		console.log(req.body);
+		console.log(req.params.email, req.params.password);
 		user.findOne({email: req.params.email}), function(err, current) {
 			if(err) {
 				res.status(404).send("User not found");
