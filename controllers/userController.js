@@ -18,8 +18,8 @@ module.exports = function(app) {
   	};
 
 	loginUser = function(req, res) {
-		// console.log(req.body);
-		user.findOne({email: req.params.email}), function(err, current) {
+		console.log(req.body);
+	    user.findOne({email: req.body.email}, function(err, current) {
 			if(err) {
 				res.status(404).send("User not found");
 			}
@@ -31,7 +31,7 @@ module.exports = function(app) {
 				else
 					res.status(500).send("Incorrect Password");
 			}
-		}
+		});
 	}
 
 	 //GET - Return a user with specified ID
