@@ -56,6 +56,9 @@ module.exports = function(app) {
 	      if (current != null){
 	        res.status(503).send("Error user exist");
 	      }
+	    	if (req.body.password == "") {
+	        res.status(503).send("Error password empty");
+	    	}
 	      else {
 	        console.log('POST');
 	        var newUserObj = new user({
